@@ -28,11 +28,11 @@ export default function BtnBookmark({
   let bookmarkAltTxt = "";
 
   if (isBookmarked) {
-    bookmarkIconSrc = "/icons/bookmark-full.svg";
-    bookmarkAltTxt = "Icon of a rose";
+    bookmarkIconSrc = "/icons/seedling-solid.svg";
+    bookmarkAltTxt = "Icon bookmarked";
   } else {
-    bookmarkIconSrc = "/icons/bookmark-empty.svg";
-    bookmarkAltTxt = "Icon of an empty rose";
+    bookmarkIconSrc = "/icons/seedling-line.svg";
+    bookmarkAltTxt = "Icon not bookmarked";
   }
 
   return (

@@ -4,10 +4,11 @@ export default createGlobalStyle`
 
 :root {
     --text-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --bg-color: #ccdad5;
+    --bg-color: #3e544d61;
     --accentcolor: #254f41;
-    --bg-medium:rgba(255, 196, 0, 0.5);
-    --bg-low: rgba(21, 255, 0, 0.5);
+    --bg-navbar: var(--accentcolor);
+    --confirm: #78f184;
+    --deny: #b73333;
     --border-radius-button: 10px;
     --border-radius-input: 5px;
 

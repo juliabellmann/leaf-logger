@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 
 const StyledNav = styled.nav`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: fixed;
   bottom: 0;
@@ -12,22 +12,44 @@ const StyledNav = styled.nav`
   left: 0;
   width: 100%;
   height: 50px;
-  background-color: beige;
+  background-color: var(--bg-navbar);
   z-index: 10;
+`;
+
+const StyledNavLink = styled(Link)`
+  /* padding: 0 30px; */
 `;
 
 export default function NavBar() {
   return (
     <StyledNav>
-      <Link href="/myplants">
+      <StyledNavLink href="/">
         <Image
-          src="/icons/bookmark-full.svg"
-          alt="Icon of a rose"
+          src="/icons/dharmachakra-solid.svg"
+          alt="Icon steering wheel"
           width={22}
           height={22}
           unoptimized
         />
-      </Link>
+      </StyledNavLink>
+      <StyledNavLink href="/myplants">
+        <Image
+          src="/icons/seedling-solid.svg"
+          alt="Icon bookmarked"
+          width={22}
+          height={22}
+          unoptimized
+        />
+      </StyledNavLink>
+      <StyledNavLink href="/newplant">
+        <Image
+          src="/icons/plus-solid.svg"
+          alt="Icon bookmarked"
+          width={22}
+          height={22}
+          unoptimized
+        />
+      </StyledNavLink>
     </StyledNav>
   );
 }

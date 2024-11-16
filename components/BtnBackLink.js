@@ -7,6 +7,10 @@ const BackLinkWrapper = styled.div`
   top: 25px;
   left: 25px;
   z-index: 10;
+
+  img {
+    color: var(--accentcolor);
+  }
 `;
 
 export default function BtnBackLink() {
@@ -16,7 +20,7 @@ export default function BtnBackLink() {
         <Image
           unoptimized
           alt={"Link to the Homepage"}
-          src={"/icons/arrow.svg"}
+          src={"/icons/circle-arrow-left-solid.svg"}
           width={30}
           height={30}
         />

@@ -9,6 +9,7 @@ export default function RootLayout({ children }) {
       </Head>
       <header>
         <h1>Leaf Logger</h1>
+        <h4>--- the logbook for your plants ---</h4>
       </header>
       <main>{children}</main>
       <NavBar />
