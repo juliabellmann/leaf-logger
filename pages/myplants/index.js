@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import PlantCard from "@/components/PlantCard";
 import BtnBackLink from "@/components/BtnBackLink";
+import Image from "next/image";
 
 const StyledPlantList = styled.ul`
   list-style: none;
@@ -27,7 +28,15 @@ export default function MyPlants({ plants, onToggleBookmark }) {
       <BtnBackLink />
       <h2>My Plants</h2>
       {bookmarkedPlants.length === 0 && (
-        <p>Unfortunately, you have not yet added any plants as favourites.</p>
+        <>
+          <p>Unfortunately, you have not yet added any plants as favourites.</p>
+          <Image
+            src={"/icons/bonsai-plant-svgrepo-com.svg"}
+            alt="Icon dead plant"
+            width="50"
+            height="50"
+          />
+      </>
       )}
       {/* FYI: Icon for error message follows after merge */}
       <StyledPlantList>

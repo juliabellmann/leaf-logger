@@ -17,14 +17,19 @@ const BackLinkWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(21, 53, 43);
   `;
+
+const StyledImage = styled(Image)`
+    color: rgb(21, 53, 43);
+`;
 
 
 export default function BtnBackLink() {
   return (
     <BackLinkWrapper>
       <Link href="/" aria-label="Link to the Homepage">
-          <Image
+          <StyledImage
             src={"/icons/reply-solid.svg"}
             alt={"Link to the Homepage"}
             width="30"

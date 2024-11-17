@@ -67,6 +67,7 @@ const StyledBookmarkImg = styled.div`
   position: absolute;
   width: calc( var(--width-btn) - 15px);
   height: calc( var(--height-btn) - 15px);
+  color: rgb(21, 53, 43);
 `;
 
 const StyledH3 = styled.h3`
@@ -153,7 +154,7 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
 
         <Image
               src={"/icons/pencil-solid.svg"}
-              alt="Icon of a dead plant"
+              alt="Icon Pencil for Edit"
               fill
               unoptimized
               />
