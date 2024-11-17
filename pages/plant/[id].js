@@ -14,7 +14,7 @@ const StyledSeasonList = styled.ul`
 const IconsContainer = styled.article`
   display: flex;
   justify-content: space-around;
-  width: 275px;
+  width: 80vw;
 `;
 
 const IconContainer = styled.div`
@@ -26,8 +26,8 @@ const IconContainer = styled.div`
 const ImageBorder = styled.article`
   position: relative;
   margin-top: 20px;
-  height: 250px;
-  width: 325px;
+  height: 75vw;
+  width: 90vw;
   border-radius: 15px;
   overflow: hidden;
   margin: auto;
@@ -75,7 +75,8 @@ const StyledH3 = styled.h3`
 
 
 const StyledDescription = styled.p`
-  width: 300px;
+  width: 85vw;
+  overflow: scroll;
 `;
 
 const StyledImage = styled(Image)`

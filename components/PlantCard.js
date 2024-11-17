@@ -33,7 +33,7 @@ const CardText = styled.div`
   background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.603988603988604) 0%,
+    rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0) 50%
   );
   width: 100%;

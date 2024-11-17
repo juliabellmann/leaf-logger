@@ -8,22 +8,29 @@ const BackLinkWrapper = styled.div`
   left: 25px;
   z-index: 10;
 
-  img {
-    color: var(--accentcolor);
-  }
-`;
+  width: var(--width-btn);
+  height: var(--height-btn);
+  color: var(--accentcolor);
+  background-color: white;
+  border-radius: 50px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  `;
+
 
 export default function BtnBackLink() {
   return (
     <BackLinkWrapper>
       <Link href="/" aria-label="Link to the Homepage">
-        <Image
-          unoptimized
-          alt={"Link to the Homepage"}
-          src={"/icons/circle-arrow-left-solid.svg"}
-          width={30}
-          height={30}
-        />
+          <Image
+            src={"/icons/reply-solid.svg"}
+            alt={"Link to the Homepage"}
+            width="30"
+            height="30"
+            optimized
+            />
       </Link>
     </BackLinkWrapper>
   );
