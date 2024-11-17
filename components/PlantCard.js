@@ -31,7 +31,6 @@ const CardText = styled.div`
   top: 0;
 
   background: rgb(0, 0, 0);
-  background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.603988603988604) 0%,
@@ -58,7 +57,7 @@ const CardBotanicalPlantName = styled.h4`
 `;
 
 const DetailsLink = styled(Link)`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 10px 0;
   text-decoration: none;
   color: white;

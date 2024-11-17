@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import PlantCard from "@/components/PlantCard";
 import BtnBackLink from "@/components/BtnBackLink";
 import PlantForm from "@/components/PlantForm";
 

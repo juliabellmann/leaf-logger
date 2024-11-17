@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
 
 :root {
-    --text-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --text-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     --bg-color: #f0f0f0;
     --accentcolor: #15352b;
     --bg-navbar: var(--accentcolor);
@@ -27,21 +27,20 @@ export default createGlobalStyle`
   }
 
   body {
-    margin: 0;
-    text-align: center;
-    margin-bottom: calc(var(--nav-height) + 20px);
     background-color: var(--bg-color);
     color: black;
+    text-align: center;
+    margin: 0;
+    margin-bottom: calc(var(--nav-height) + 20px);
   }
 
   main {
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-
+    
+    width: 100vw;
     min-height: 100vh;
   }
-
 `;
