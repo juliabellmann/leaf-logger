@@ -1,23 +1,32 @@
 import Image from "next/image";
 import styled, { css } from "styled-components";
 
-const StyledToggleBookmark = styled.button`
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-style: none;
-  border-radius: 0 0 5px 5px;
-`;
-
 const StyledToggleWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   right: 20px;
   position: absolute;
   z-index: 2;
+
 `;
+
+const StyledToggleBookmark = styled.button`
+  width: var(--width-btn);
+  height: var(--height-btn);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 0 0 10px 10px;
+`;
+
+const StyledBookmarkImg = styled.div`
+  position: absolute;
+  width: calc( var(--width-btn) - 15px);
+  height: calc( var(--height-btn) - 15px);
+`;
+
 
 export default function BtnBookmark({
   onToggleBookmark,
@@ -38,13 +47,15 @@ export default function BtnBookmark({
   return (
     <StyledToggleWrapper>
       <StyledToggleBookmark onClick={() => onToggleBookmark(plantId)}>
-        <Image
-          src={bookmarkIconSrc}
-          alt={bookmarkAltTxt}
-          width={20}
-          height={20}
-          unoptimized
-        />
+        <StyledBookmarkImg>
+
+          <Image
+            src={bookmarkIconSrc}
+            alt={bookmarkAltTxt}
+            fill
+            unoptimized
+            />
+            </StyledBookmarkImg>
       </StyledToggleBookmark>
     </StyledToggleWrapper>
   );

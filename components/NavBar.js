@@ -27,27 +27,27 @@ export default function NavBar() {
         <Image
           src="/icons/home.svg"
           alt="Icon steering wheel"
-          width={22}
-          height={22}
-          unoptimized
+          width="35"
+          height="35"
+          optimized
         />
       </StyledNavLink>
       <StyledNavLink href="/myplants">
         <Image
-          src="/icons/seedling-solid.svg"
+          src="/icons/seedling-solid-nav.svg"
           alt="Icon bookmarked"
-          width={22}
-          height={22}
-          unoptimized
+          width="35"
+          height="35"
+          optimized
         />
       </StyledNavLink>
       <StyledNavLink href="/newplant">
         <Image
           src="/icons/plus-solid.svg"
           alt="Icon bookmarked"
-          width={22}
-          height={22}
-          unoptimized
+          width="35"
+          height="35"
+          optimized
         />
       </StyledNavLink>
     </StyledNav>

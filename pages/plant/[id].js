@@ -60,6 +60,13 @@ const StyledEditButton = styled.button`
   position: absolute;
   right: 40px;
   top: 70px;
+  background-color: white;
+`;
+
+const StyledBookmarkImg = styled.div`
+  position: absolute;
+  width: calc( var(--width-btn) - 15px);
+  height: calc( var(--height-btn) - 15px);
 `;
 
 const StyledH3 = styled.h3`
@@ -69,6 +76,10 @@ const StyledH3 = styled.h3`
 
 const StyledDescription = styled.p`
   width: 300px;
+`;
+
+const StyledImage = styled(Image)`
+  object-fit: cover;
 `;
 
 
@@ -137,13 +148,15 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
 
       
       <StyledEditButton onClick={toggleFormVisibility}>
+        <StyledBookmarkImg>
+
         <Image
               src={"/icons/pencil-solid.svg"}
-              width={25}
-              height={25}
               alt="Icon of a dead plant"
+              fill
               unoptimized
-            />
+              />
+        </StyledBookmarkImg>
       </StyledEditButton>
       {isFormVisible && <>
       <PlantForm 
@@ -152,20 +165,20 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
         onCancel={handleCancel}
         isFormVisible={isFormVisible}
         isEditMode={true} 
-        initialData={plantData}/>
+        initialData={plantData}
+      />
       </>
       }
       
       <h2>{plantData.name}</h2>
       <StyledH3>{plantData.botanicalName}</StyledH3>
       <ImageBorder>
-        <Image
-          alt={`Image of ${plantData.name}`}
-          fill
-          src={
-            plantData.imageUrl ||
+        <StyledImage
+          src={plantData.imageUrl ||
             "https://images.unsplash.com/photo-1518335935020-cfd6580c1ab4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           }
+          alt={`Image of ${plantData.name}`}
+          fill
         />
       </ImageBorder>
       <StyledDescription>{plantData.description}</StyledDescription>

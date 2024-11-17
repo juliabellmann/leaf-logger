@@ -5,7 +5,7 @@ export default createGlobalStyle`
 :root {
     --text-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --bg-color: #f0f0f0;
-    --accentcolor: #1a3d31;
+    --accentcolor: #15352b;
     --bg-navbar: var(--accentcolor);
     --confirm: #78f184;
     --deny: #b73333;
@@ -15,6 +15,9 @@ export default createGlobalStyle`
     --min-width-med: 768px;
 
     --nav-height: 50px;
+
+    --width-btn: 48px;
+    --height-btn: var(--width-btn);
 
   }
   *,

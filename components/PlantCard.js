@@ -17,9 +17,10 @@ const ImageWrapper = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-  img {
-    object-fit: cover;
-  }
+`;
+
+const StyledImage = styled(Image)`
+  object-fit: cover;
 `;
 
 const CardText = styled.div`
@@ -67,13 +68,12 @@ export default function PlantCard({ plant, onToggleBookmark }) {
   return (
     <Card>
       <ImageWrapper>
-        <Image
-          alt={`Image of ${plant.name}`}
-          fill
-          src={
-            plant.imageUrl ||
+        <StyledImage
+          src={plant.imageUrl ||
             "https://images.unsplash.com/photo-1678897482043-31388fbe7dac?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           }
+          alt={`Image of ${plant.name}`}
+          fill
         />
       </ImageWrapper>
 
