@@ -11,13 +11,15 @@ const StyledNav = styled.nav`
   right: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: var(--nav-height);
   background-color: var(--bg-navbar);
   z-index: 10;
 `;
 
 const StyledNavLink = styled(Link)`
-  /* padding: 0 30px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default function NavBar() {

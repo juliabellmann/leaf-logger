@@ -14,7 +14,7 @@ export default createGlobalStyle`
 
     --min-width-med: 768px;
 
-    --nav-height: 50px;
+    --nav-height: 60px;
 
     --width-btn: 48px;
     --height-btn: var(--width-btn);
