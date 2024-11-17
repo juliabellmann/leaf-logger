@@ -6,10 +6,11 @@ import BtnBookmark from "./BtnBookmark";
 const Card = styled.article`
   position: relative;
   margin-top: 20px;
-  height: 55vw;
-  width: 90vw;
+  height: 200px;
+  width: 325px;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 5px 5px 5px var(--accentcolor);
 `;
 
 const ImageWrapper = styled.div`

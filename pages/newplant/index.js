@@ -8,14 +8,17 @@ const StyledPlantList = styled.ul`
   padding: 0;
 `;
 
-export default function MyPlants({ plants, onToggleBookmark }) {
+export default function MyPlants({ plants, onCreatePlant }) {
   const bookmarkedPlants = plants.filter((plant) => plant.isBookmarked);
 
   return (
     <>
       <BtnBackLink />
       <h2>Create a new Plant</h2>
-      <PlantForm></PlantForm>
+      <PlantForm
+        onCreatePlant={onCreatePlant} 
+        isEditMode={false} 
+      />
     </>
   );
 }

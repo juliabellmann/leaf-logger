@@ -8,6 +8,18 @@ import { StyledButton } from "@/components/StyledButton";
 const StyledPlantList = styled.ul`
   list-style: none;
   padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+  }
 `;
 
 const StyledErrorMessageWrapper = styled.div`

@@ -25,7 +25,7 @@ export default function NavBar() {
     <StyledNav>
       <StyledNavLink href="/">
         <Image
-          src="/icons/dharmachakra-solid.svg"
+          src="/icons/home.svg"
           alt="Icon steering wheel"
           width={22}
           height={22}

@@ -4,6 +4,19 @@ import { StyledButton } from "./StyledButton";
 const StyledFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
+
+  width: 350px;
+
+    h3 {
+      display: flex;
+      align-items: start;
+    }
+
+  @media (min-width: 768px) {
+    /* min-width: 300px; */
+    width: 60vw;
+  }
 
   ${css`
     input[type="text"] {
@@ -61,11 +74,11 @@ const waterOptions = [
   { id: "waterNeed3", value: "High", label: "High" },
 ];
 
-const fertiliserOptions = [
-  { id: "fertiliserSeason1", value: "Summer", label: "Summer" },
-  { id: "fertiliserSeason2", value: "Spring", label: "Spring" },
-  { id: "fertiliserSeason3", value: "Autumn", label: "Autumn" },
-  { id: "fertiliserSeason4", value: "Winter", label: "Winter" },
+const fertilizerOptions = [
+  { id: "fertilizerSeason1", value: "Summer", label: "Summer" },
+  { id: "fertilizerSeason2", value: "Spring", label: "Spring" },
+  { id: "fertilizerSeason3", value: "Autumn", label: "Autumn" },
+  { id: "fertilizerSeason4", value: "Winter", label: "Winter" },
 ];
 
 export default function PlantForm({
@@ -82,8 +95,8 @@ export default function PlantForm({
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    const selectedSeasons = formData.getAll("fertiliserSeason");
-    data.fertiliserSeason = selectedSeasons;
+    const selectedSeasons = formData.getAll("fertilizerSeason");
+    data.fertilizerSeason = selectedSeasons;
 
     if (selectedSeasons.length === 0) {
       // FYI: Hinzufügen einer universellen Error-Message für alle Pflichtfelder folgt
@@ -179,19 +192,19 @@ export default function PlantForm({
           ))}
         </section>
 
-        <label htmlFor="fertiliserSeason">
-          <h3>Fertiliser Season: *</h3>
+        <label htmlFor="fertilizerSeason">
+          <h3>fertilizer Season: *</h3>
         </label>
 
         <section>
-          {fertiliserOptions.map((option) => (
+          {fertilizerOptions.map((option) => (
             <div key={option.id}>
               <input
                 type="checkbox"
                 id={option.id}
-                name="fertiliserSeason"
+                name="fertilizerSeason"
                 value={option.value}
-                defaultChecked={isEditMode ? initialData?.fertiliserSeason.includes(option.value) : null}
+                defaultChecked={isEditMode ? initialData?.fertilizerSeason.includes(option.value) : null}
               />
               <label htmlFor={option.id}>{option.label}</label>
             </div>

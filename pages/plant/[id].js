@@ -14,6 +14,7 @@ const StyledSeasonList = styled.ul`
 const IconsContainer = styled.article`
   display: flex;
   justify-content: space-around;
+  width: 275px;
 `;
 
 const IconContainer = styled.div`
@@ -25,8 +26,8 @@ const IconContainer = styled.div`
 const ImageBorder = styled.article`
   position: relative;
   margin-top: 20px;
-  height: 55vw;
-  width: 90vw;
+  height: 250px;
+  width: 325px;
   border-radius: 15px;
   overflow: hidden;
   margin: auto;
@@ -61,6 +62,15 @@ const StyledEditButton = styled.button`
   top: 70px;
 `;
 
+const StyledH3 = styled.h3`
+  margin: 0;
+`;
+
+
+const StyledDescription = styled.p`
+  width: 300px;
+`;
+
 
 export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onEditPlant }) {
   const [isDeleteOption, setIsDeleteOption] = useState(false);
@@ -80,11 +90,11 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
 
   const waterNeed = plantData.waterNeed;
   if (waterNeed === "High") {
-    waterIconSrc = "/icons/drop-full.svg";
+    waterIconSrc = "/icons/water-high.svg";
   } else if (waterNeed === "Medium") {
-    waterIconSrc = "/icons/drop-half.svg";
+    waterIconSrc = "/icons/water-med.svg";
   } else if (waterNeed === "Low") {
-    waterIconSrc = "/icons/drop.svg";
+    waterIconSrc = "/icons/water-low.svg";
   }
 
   let lightIconSrc = "";
@@ -92,11 +102,11 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
   const lightNeed = plantData.lightNeed;
 
   if (lightNeed === "Full Sun") {
-    lightIconSrc = "/icons/sun.svg";
-  } else if (lightNeed === "Partial Shade") {
-    lightIconSrc = "/icons/sun-half.svg";
-  } else if (lightNeed === "Full Shade") {
     lightIconSrc = "/icons/sun-full.svg";
+  } else if (lightNeed === "Partial Shade") {
+    lightIconSrc = "/icons/shade-partial.svg";
+  } else if (lightNeed === "Full Shade") {
+    lightIconSrc = "/icons/shade-full.svg";
   }
 
   function toggleFormVisibility() {
@@ -147,7 +157,7 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
       }
       
       <h2>{plantData.name}</h2>
-      <h3>{plantData.botanicalName}</h3>
+      <StyledH3>{plantData.botanicalName}</StyledH3>
       <ImageBorder>
         <Image
           alt={`Image of ${plantData.name}`}
@@ -158,7 +168,7 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
           }
         />
       </ImageBorder>
-      <p>{plantData.description}</p>
+      <StyledDescription>{plantData.description}</StyledDescription>
 
       <IconsContainer>
         <IconContainer>
@@ -187,12 +197,12 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
           <Image
             unoptimized
             alt={"Icon of a fertiliser"}
-            src={"/icons/fertiliser.svg"}
+            src={"/icons/fertilizer.svg"}
             width={30}
             height={30}
           />
           <StyledSeasonList>
-            {plantData.fertiliserSeason.map((season) => {
+            {plantData.fertilizerSeason.map((season) => {
               return <li key={season}>{season}</li>;
             })}
           </StyledSeasonList>

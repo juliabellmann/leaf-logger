@@ -4,13 +4,15 @@ export default createGlobalStyle`
 
 :root {
     --text-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --bg-color: #3e544d61;
-    --accentcolor: #254f41;
+    --bg-color: #f0f0f0;
+    --accentcolor: #1a3d31;
     --bg-navbar: var(--accentcolor);
     --confirm: #78f184;
     --deny: #b73333;
     --border-radius-button: 10px;
     --border-radius-input: 5px;
+
+    --min-width-med: 768px;
 
     --nav-height: 50px;
 
@@ -23,18 +25,20 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-color);
     text-align: center;
-    padding: 0 10px;
-    margin-bottom: 60px;
+    margin-bottom: calc(var(--nav-height) + 20px);
+    background-color: var(--bg-color);
+    color: black;
   }
 
   main {
-    /* width: 375px; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    min-height: 100vh;
   }
 
 `;
