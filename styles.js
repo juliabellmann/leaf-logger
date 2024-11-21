@@ -4,9 +4,10 @@ export default createGlobalStyle`
 
 :root {
     --text-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    --bg-color: #f0f0f0;
-    --accentcolor: #15352b;
-    --bg-navbar: var(--accentcolor);
+    --bg-color: #f2f2f2;
+    --bg-color-btn: #fff;
+    --accent-color: #15352b;
+    --bg-navbar: var(--accent-color);
     --confirm: #78f184;
     --deny: #b73333;
     --border-radius-button: 10px;
@@ -18,6 +19,8 @@ export default createGlobalStyle`
 
     --width-btn: 48px;
     --height-btn: var(--width-btn);
+
+    --padding: 10px;
 
   }
   *,

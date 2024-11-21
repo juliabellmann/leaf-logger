@@ -1,42 +1,47 @@
-import Image from "next/image";
+import BackBtnSvg from "@/assets/icons/reply-solid.svg";
 import Link from "next/link";
 import styled from "styled-components";
 
 const BackLinkWrapper = styled.div`
   position: fixed;
-  top: 25px;
+  top: 70px;
   left: 25px;
   z-index: 10;
 
   width: var(--width-btn);
   height: var(--height-btn);
   color: var(--accentcolor);
-  background-color: white;
-  border-radius: 50px;
+  background-color: var(--bg-color-btn);
+  border-radius: 50%;
   
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(21, 53, 43);
+
   `;
 
-const StyledImage = styled(Image)`
-    color: rgb(21, 53, 43);
-`;
+const StyledSvgContainer = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  height: 48px;
+  width: 48px;
+
+  padding: var(--padding);
+
+  border-radius: 50%;
+  border: 1px solid var(--accent-color);
+
+  fill: var(--accent-color);
+`;
 
 export default function BtnBackLink() {
   return (
     <BackLinkWrapper>
-      <Link href="/" aria-label="Link to the Homepage">
-          <StyledImage
-            src={"/icons/reply-solid.svg"}
-            alt={"Link to the Homepage"}
-            width="30"
-            height="30"
-            optimized
-            />
-      </Link>
+      <StyledSvgContainer href="/" aria-label="Link to the Homepage">
+      <BackBtnSvg />
+      </StyledSvgContainer>
     </BackLinkWrapper>
   );
 }

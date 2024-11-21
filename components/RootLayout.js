@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const StyledH1 = styled.h1`
-  color: var(--accentcolor);
+  color: var(--accent-color);
   margin-bottom: 0;
 
   @media (min-width: 768px) {
@@ -12,7 +12,7 @@ const StyledH1 = styled.h1`
   }
 `;
 const StyledH4 = styled.h4`
-  color: var(--accentcolor);
+  color: var(--accent-color);
   margin: 0 0 20px 0;
 
   @media (min-width: 768px) {
@@ -21,7 +21,7 @@ const StyledH4 = styled.h4`
 `;
 
 const StyledHeader = styled.header`
-border-bottom: 3px var(--accentcolor) solid;
+border-bottom: 3px var(--accent-color) solid;
 margin-bottom: 20px;
 display: flex;
 flex-direction: column;
