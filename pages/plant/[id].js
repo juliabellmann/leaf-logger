@@ -5,6 +5,7 @@ import BtnBackLink from "@/components/BtnBackLink";
 import { useState } from "react";
 import { StyledButton } from "@/components/StyledButton";
 import PlantForm from "@/components/PlantForm";
+import StarRating from "@/components/StarRating";
 
 const StyledSeasonList = styled.ul`
   list-style: none;
@@ -148,18 +149,17 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
     <>
       <BtnBackLink />
 
-      
       <StyledEditButton onClick={toggleFormVisibility}>
         <StyledBookmarkImg>
-
-        <Image
-              src={"/icons/pencil-solid.svg"}
-              alt="Icon Pencil for Edit"
-              fill
-              unoptimized
-              />
+          <Image
+            src={"/icons/pencil-solid.svg"}
+            alt="Icon Pencil for Edit"
+            fill
+            unoptimized
+          />
         </StyledBookmarkImg>
       </StyledEditButton>
+
       {isFormVisible && <>
       <PlantForm 
         onCreatePlant={onCreatePlant} 
@@ -183,6 +183,10 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
           fill
         />
       </ImageBorder>
+
+      <StarRating></StarRating>
+
+
       <StyledDescription>{plantData.description}</StyledDescription>
 
       <IconsContainer>
@@ -228,14 +232,10 @@ export default function PlantDetails({ plants, onDeletePlant, onCreatePlant, onE
         {isDeleteOption && (
           <>
             <p>Do you really want to delete the plant?</p>
-            <StyledButton $variant="delete" onClick={() => onDeletePlant(id)}>
-              Delete
-            </StyledButton>
+            <StyledButton $variant="delete" onClick={() => onDeletePlant(id)}>Delete</StyledButton>
           </>
         )}
-        <StyledButton onClick={toggleDeleteOption}>
-          {toggleButtonName} 
-        </StyledButton>
+        <StyledButton onClick={toggleDeleteOption}>{toggleButtonName}</StyledButton>
       </StyledButtonContainer>
     </>
   );

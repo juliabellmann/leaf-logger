@@ -99,7 +99,6 @@ export default function PlantForm({
     data.fertilizerSeason = selectedSeasons;
 
     if (selectedSeasons.length === 0) {
-      // FYI: Hinzufügen einer universellen Error-Message für alle Pflichtfelder folgt
       alert("Please select at least one season.");
       return;
     }
@@ -111,6 +110,7 @@ export default function PlantForm({
       onCreatePlant({ ...initialData, ...data });
     }
 
+    // Formular Reset nach Klick
     event.target.reset();
   }
 
